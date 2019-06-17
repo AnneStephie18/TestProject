@@ -4,12 +4,17 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 import java.util.logging.Logger;
+/*
+This class is inherited from vehicle class.This perfoms login operation,booking details,check availability,payment details.
+*/
 public class Car extends Vehicle{
 	private static Scanner sc;String b;
+	//constructor of this class
 	Car()
 	{
 		super();	
 	}
+	//Driverdetails is fetched from the file and ready to display whenever it is booked 
 	public void driverDetails()
 	{
 		
@@ -27,6 +32,7 @@ public class Car extends Vehicle{
 		}
 		
 	}
+	//Information about car ie.start/stop
 	public void drive()
 	{
 		if(fuel>0)
@@ -40,6 +46,7 @@ public class Car extends Vehicle{
 		}
 		
 	}
+	//Checking the credentials of the customer
 	 void login(String name,String pwd)
 	{
 		
@@ -67,6 +74,10 @@ public class Car extends Vehicle{
 		}
 		
 	}
+	/*
+	By passsing source,destination,kilo meters will check the availability of the car,if within 3m control moves to the available state proceeding with 
+	payment details
+	*/
 	public void booking(String src,String dest,int meters) throws InterruptedException 
 	{
 		
@@ -82,6 +93,7 @@ public class Car extends Vehicle{
 		
 		
 	}
+	//On available condition it proceed with payment mode by cash or card
 	public void available(int arg) throws InterruptedException 
 	{
 		
@@ -110,6 +122,7 @@ public class Car extends Vehicle{
 				e.printStackTrace();
 			}
 	}
+	//payment by card
 	 public  void payment(long cards) 
 	{
 		 
@@ -125,6 +138,7 @@ public class Car extends Vehicle{
 	{
 		LOGGER.info("confirmed");
 	}
+
 	public void cancel()
 	{
 		LOGGER.info("canceled");
