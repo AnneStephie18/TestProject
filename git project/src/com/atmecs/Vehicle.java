@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 import com.atmecs.OverSpeedException;
 import com.atmecs.Vehicle;
-
+//This class contain the over speed exception
 public class Vehicle {
 	 Logger LOGGER = Logger.getLogger(Vehicle.class.getName());
 	private String name;
@@ -30,6 +30,7 @@ public class Vehicle {
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
+	//whether condition of the car is start/stop calculated by reducing fuel
 	public void drive()
 	{
 		if(fuel>0)
@@ -55,8 +56,9 @@ public class Vehicle {
 			LOGGER.info("stopped");
 		}
 	}
+	//By providing overspeed exception ,customer able to know the state(safe/danger)
 	public void overSpeed(int speed)throws OverSpeedException
-	{// this.speed=speed;
+	{
 		
 				if(speed>60)
 				{
