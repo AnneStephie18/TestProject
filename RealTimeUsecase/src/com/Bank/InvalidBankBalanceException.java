@@ -7,5 +7,5 @@ public class InvalidBankBalanceException extends Exception{
 		super(message);
 	}
 	
-	
+
 }

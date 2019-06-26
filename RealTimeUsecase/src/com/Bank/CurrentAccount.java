@@ -12,6 +12,7 @@ public class CurrentAccount  implements BankAccount {
 			{
 				log.info("Invalid Amount");
 			}
+		
 			else
 			{
 			balance += amount;

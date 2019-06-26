@@ -12,6 +12,7 @@ public	class SavingAccount implements BankAccount {
 			{
 				log.info("Invalid Amount");
 			}
+		
 			else {
 			balance += amount;
 			log.info("Available Balance  :  " + balance);

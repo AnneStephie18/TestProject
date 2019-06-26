@@ -58,6 +58,7 @@ public class Test {
 }
 }
 
+
 interface BankAccount1
 {
     boolean Deposit(double amount);

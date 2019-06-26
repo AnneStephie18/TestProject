@@ -4,6 +4,7 @@ public class BankCustomer {
 	String name;
 	Long accountnumber;
 	String accounttype;
+
 	@Override
 	public String toString() {
 		return "BankCustomer [name=" + name + ", accountnumber=" + accountnumber + ", accounttype=" + accounttype + "]";
