@@ -16,6 +16,7 @@ import java.util.logging.Logger;
  * @author Anne.Sivakumar
  *
  */
+
 public class Dealer {
 	Logger log = Logger.getLogger(Dealer.class.getName());
 	public int items;

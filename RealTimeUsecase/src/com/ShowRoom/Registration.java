@@ -28,7 +28,8 @@ public void WriteCustomerDetails()
 			if (file.createNewFile()) 
 			{
 				System.out.println("file created");
-			} else {
+			} 
+			else {
 				System.out.println("failed");
 				System.exit(0);
 			}

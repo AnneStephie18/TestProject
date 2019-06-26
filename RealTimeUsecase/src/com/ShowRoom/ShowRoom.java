@@ -8,6 +8,7 @@ import java.util.logging.Logger;
  * @author Anne.Sivakumar
  *
  */
+
 public class ShowRoom {
 	public static Scanner sc = new Scanner(System.in);
 	public static String model;
