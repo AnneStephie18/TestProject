@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="addr" class="com.atmecs.SpringDemo.Address">
+       <property name="city" value="Hyderabad"/>
+       <property name="state" value="AP"/>
+       <property name="zipcode" value="789654"/>
+   </bean>
+   <bean id="addrs" class="com.atmecs.SpringDemo.Address">
+       <property name="city" value="Chennai"/>
+       <property name="state" value="TamilNadu"/>
+       <property name="zipcode" value="987654"/>
+   </bean>
+   <bean id="emp" class="com.atmecs.SpringDemo.Employee" init-method="init" destroy-method="destroy">
+       <property name="eid" value="1018"/>
+       <property name="ename" value="ANNE STEPHIE"/>
+       <property name="dept" value="SOFTWARE ENGINEER"/>
+       <constructor-arg ref="addr"/> 
+              <property name="address" ref="addr"/>
+   </bean>
+<bean id="emp1" class="com.atmecs.SpringDemo.Employee">
+       <property name="eid" value="1019"/>
+       <property name="ename" value="BANU"/>
+       <property name="dept" value="SOFTWARE ENGINEER"/>
+       <constructor-arg ref="addrs"/> 
+              <property name="address" ref="addrs"/>
+   </bean>
+ 
+</beans>
