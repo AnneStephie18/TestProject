@@ -47,12 +47,14 @@ public class TestBankAccount {
 				log.info("1.Deposit in CurrentAccount");
 				log.info("Enter the amount to deposit");
 				dep = sc.nextDouble();
+				//calling the deposit method in current account
 				CurrentAccount.Deposit(dep);
                 break;
 			
 			case 3:log.info("1.Deposit in SavingAccount");
 			log.info("Enter the amount to deposit");
 			dep = sc.nextDouble();
+			//calling the deposit method in saving account
 			SavingAccount.Deposit(dep);
 			break;
 			case 4:
@@ -63,6 +65,7 @@ public class TestBankAccount {
 
 					try {
 						try {
+							//calling the withdraw method in current account
 							CurrentAccount.Withdraw(withdr);
 						} 
 						catch (LimitExceedException e) {
@@ -78,6 +81,7 @@ public class TestBankAccount {
 				withdr = sc.nextDouble();
 				try 
 				{
+					//calling the withdraw method in saving account
 					SavingAccount.Withdraw(withdr);
 				} 
 				catch (InvalidBankBalanceException | LimitExceedException e) {
