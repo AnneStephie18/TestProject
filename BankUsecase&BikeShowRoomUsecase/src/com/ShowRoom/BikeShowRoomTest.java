@@ -29,14 +29,18 @@ public class BikeShowRoomTest {
     	   log.info("Enter the choice");
 		   choice = sc.nextInt();
     	   switch (choice) {
+    	   //calling the WriteCustomerDetails method in Registration Customer Details class.
 		case 1:registration.WriteCustomerDetails();
 			break;
+			//calling the ReadCustomerDetails method in Registration Customer Details class.
 		case 2:registration.ReadCustomerDetails();
 			break;
+			//calling the search method in Registration Customer Details class.
 		case 3:registration.Search();
 		    break;
 		case 4:log.info("Which Brand do you need?" + "\n" + Dealer.vehicleList);
 		String brand = sc.next();
+		//calling the brand method in dealer class.
 		vehicle.brand(brand);
 		log.info("These are the available model" + "\n");
 		for (String s : vehicle.vehicleModel1) {
@@ -44,6 +48,7 @@ public class BikeShowRoomTest {
 		}
 		log.info("which model do you want?" + "\n");
 		 model = sc.next();
+		//calling the model method in dealer class.
 		vehicle.model(model);
 			break;
        }
