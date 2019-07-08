@@ -12,7 +12,16 @@ public class EmployeeDetails {
 	private String employeegender;
 	private boolean employeeverification;
 	public static String Department;
-//get employee id
+	private transient double salary;
+	//get employee salary
+    public double getSalary() {
+		return salary;
+	}
+//set employee salary
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	//get employee id
 	public int getEmployeeid() {
 		return employeeid;
 	}
