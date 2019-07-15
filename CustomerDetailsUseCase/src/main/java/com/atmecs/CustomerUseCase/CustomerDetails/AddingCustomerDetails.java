@@ -17,7 +17,6 @@ public class AddingCustomerDetails {
         initEmps();
         
     }
-
     private static void initEmps() {
     	Customer customer1 = new Customer("ANNE","S",23,1233456678,"FEMALE","THATHAIPERIYAR NAGAR","TRICHY","TAMILNADU",630003,"INDIA","anne1234@gmail.com");
     	Customer customer2 = new Customer("BANU","S",30,98766543,"FEMALE","NEHRU NAGAR","MADURAI","TAMILNADU",730003,"INDIA","banu9876@gmail.com");
@@ -28,25 +27,25 @@ public class AddingCustomerDetails {
         empMap.put(customer3.getEmail(), customer3);
     }
  
-    public Customer getEmployee(String getEmail) {
+    public Customer getCustomer(String getEmail) {
         return empMap.get(getEmail);
     }
  
-    public Customer addEmployee(Customer customer) {
+    public Customer addCustomer(Customer customer) {
         empMap.put(customer.getEmail(), customer);
         return customer;
     }
  
-    public Customer updateEmployee(Customer customer) {
+    public Customer updateCustomer(Customer customer) {
         empMap.put(customer.getEmail(), customer);
         return customer;
     }
  
-    public void deleteEmployee(String email) {
+    public void deleteCustomer(String email) {
         empMap.remove(email);
     }
  
-    public List<Customer> getAllEmployees() {
+    public List<Customer> getAllCustomers() {
         Collection<Customer> c = empMap.values();
         List<Customer> list = new ArrayList<Customer>();
         list.addAll(c);
