@@ -8,7 +8,11 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
+/**
+ * automate the delete request using rest assured 
+ * @author Anne.Sivakumar
+ *
+ */
 public class DeleteRequest {
 	 JSONObject jsonObject=new JSONObject();
 
