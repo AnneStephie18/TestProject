@@ -18,7 +18,10 @@ public class Customer {
 		private int pincode;
 		private String country;
 		private String email;
-		
+		public Customer()
+		{
+			
+		}
 		
 		public Customer(String firstname, String lastname, int age,int phone, String sex,String address,String city,String state,int pincode,String country,String email) {
 	        this.firstname = firstname;

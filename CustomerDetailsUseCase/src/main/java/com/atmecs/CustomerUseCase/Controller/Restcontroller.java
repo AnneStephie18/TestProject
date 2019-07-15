@@ -34,8 +34,8 @@ public class Restcontroller {
 	            produces = { MediaType.APPLICATION_JSON_VALUE, //
 	                    MediaType.APPLICATION_XML_VALUE })
 	    @ResponseBody
-	    public List<Customer> getEmployees() {
-	        List<Customer> list = customerDetails.getAllEmployees();
+	    public List<Customer> getCustomers() {
+	        List<Customer> list = customerDetails.getAllCustomers();
 	        return list;
 	    }
 	 
@@ -45,8 +45,8 @@ public class Restcontroller {
 	            produces = { MediaType.APPLICATION_JSON_VALUE, //
 	                    MediaType.APPLICATION_XML_VALUE })
 	    @ResponseBody
-	    public Customer getEmployee(@PathVariable("email") String email) {
-	        return customerDetails.getEmployee(email);
+	    public Customer getCustomer(@PathVariable("email") String email) {
+	        return customerDetails.getCustomer(email);
 	    }
 	 
 	  
@@ -56,11 +56,11 @@ public class Restcontroller {
 	            produces = { MediaType.APPLICATION_JSON_VALUE, //
 	                    MediaType.APPLICATION_XML_VALUE })
 	    @ResponseBody
-	    public Customer addEmployee(@RequestBody Customer customer) {
+	    public Customer addCustomer(@RequestBody Customer customer) {
 	 
 	        System.out.println("(Service Side) Creating employee: " + customer.getEmail());
 	 
-	        return customerDetails.addEmployee(customer);
+	        return customerDetails.addCustomer(customer);
 	    }
 	
 	    @RequestMapping(value = "/customer", //
@@ -68,11 +68,11 @@ public class Restcontroller {
 	            produces = { MediaType.APPLICATION_JSON_VALUE, //
 	                    MediaType.APPLICATION_XML_VALUE })
 	    @ResponseBody
-	    public Customer updateEmployee(@RequestBody Customer customer) {
+	    public Customer updateCustomer(@RequestBody Customer customer) {
 	 
 	        System.out.println("(Service Side) Editing employee: " + customer.getEmail());
 	 
-	        return customerDetails.updateEmployee(customer);
+	        return customerDetails.updateCustomer(customer);
 	    }
 	 
 	  
@@ -80,11 +80,11 @@ public class Restcontroller {
 	            method = RequestMethod.DELETE, //
 	            produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	    @ResponseBody
-	    public void deleteEmployee(@PathVariable("email") String email) {
+	    public void deleteCustomer(@PathVariable("email") String email) {
 	 
 	        System.out.println("(Service Side) Deleting employee: " + email);
 	 
-	        customerDetails.deleteEmployee(email);
+	        customerDetails.deleteCustomer(email);
 	    }
 	 
 	}
