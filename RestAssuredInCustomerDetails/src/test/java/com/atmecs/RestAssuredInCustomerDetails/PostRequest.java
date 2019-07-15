@@ -9,8 +9,13 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
+/**
+ * automate the insert request using rest assured 
+ * @author Anne.Sivakumar
+ *
+ */
 public class PostRequest {
+	//one method to insert in to the file by passing json as string 
 	@Test
 
 	public void postService()
@@ -31,7 +36,7 @@ public class PostRequest {
 	}
 	 JSONObject jsonObject=new JSONObject();
 	 
-	
+	//another method to insert in to the file by passing json object 
 	  @Test
 	    public void postOtherMethod() throws JSONException
 	    {
