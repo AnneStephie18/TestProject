@@ -8,7 +8,11 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
+/**
+ * automate the put request using rest assured 
+ * @author Anne.Sivakumar
+ *
+ */
 public class PutRequest {
 	 JSONObject jsonObject=new JSONObject();
 	 @Test
