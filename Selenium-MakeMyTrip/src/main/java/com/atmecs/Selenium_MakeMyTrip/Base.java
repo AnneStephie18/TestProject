@@ -2,19 +2,30 @@ package com.atmecs.Selenium_MakeMyTrip;
 
 import java.io.FileInputStream;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+/**
+ * This class is used to get the website url for three different browser
+ * @author Anne.Sivakumar
+ *
+ */
 
 public class Base {
 	public WebDriver driver;
 	public String path="TestData.properties";
 	public Properties properties;
 	public FileInputStream fis;
-	
-
+	/**
+	 * By using properties file compare the key with the name of the browser and open browser with corresponding value in properties file
+	 * @throws Exception
+	 */
+@BeforeTest
 	public void chooseBrowser() throws Exception
 	{
 		properties=new Properties();
@@ -38,14 +49,12 @@ public class Base {
 		}
 		
 	}
-	public void openUrl() throws Exception
-	{
-		chooseBrowser();
-		driver.get(properties.getProperty("url"));
-	}
+	
+	//close the driver
+	
 	public void quitUrl() throws Exception
 	{
-		chooseBrowser();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    driver.quit();
 	}
 	
